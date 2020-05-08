@@ -1,7 +1,8 @@
 import React from 'react';
 import TodoForm from './components/TodoForm';
 import TodoList from './components/TodoList';
-import "./components/Todo.css";
+import '../src/index.css';
+
 
 const tasks = [
   {
@@ -20,6 +21,7 @@ const tasks = [
     complete: false
   }
 ];
+
 
 class App extends React.Component {
   // you will need a place to store your state in this component.
@@ -40,6 +42,7 @@ class App extends React.Component {
           return {
             ...task,
             complete: !task.complete
+
           };
         }
         return task;

@@ -1,12 +1,18 @@
 import React from 'react';
 import Todo from './Todo';
+import { Button, Form } from 'reactstrap';
+import '../components/Todo.css'
+
+
 
 // your components will all go in this `component` directory.
 // feel free to change this component.js into TodoList.js
 
 const TodoList = props => {
+
     return(
-        <div className="todo-list">
+        <Form>
+            <div className="todoBody">
             {props.tasks.map(task => (
                 <Todo
                     toggComplete={props.toggComplete}
@@ -14,10 +20,11 @@ const TodoList = props => {
                     task={task}
                 />
             ))}
-            <button className="clear-btn" onClick={props.clearCompleted}>
+            </div>
+            <Button className="clear-btn" onClick={props.clearCompleted}>
                 Clear Completed Tasks
-            </button>
-        </div>
+            </Button>
+        </Form>
     )
 }
 

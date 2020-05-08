@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'reactstrap';
 
 class TodoForm extends React.Component {
     constructor() {
@@ -30,7 +31,7 @@ class TodoForm extends React.Component {
                     value={this.state.newTaskText}
                     onChange={this.handleChanges}
                 />
-                <button>Add</button>
+                <Button>Add</Button>
             </form>
         )
     }
